@@ -13,13 +13,13 @@ For more information, please checkout the [paper](https://ieeexplore.ieee.org/do
 ## Getting started
 The folder ```data``` should be like this
 ```
-    datasets   
-    └── WHU
-        ├── train
-        ├── BgMaskfromBoxes_train
-        └── multi633_g3
-            ├── Y_crf
-            └── Y_ret
+datasets   
+└── WHU
+    ├── train
+    ├── BgMaskfromBoxes_train
+    └── multi633_g3
+        ├── Y_crf
+        └── Y_ret
 ```
 
 
@@ -27,7 +27,7 @@ The folder ```data``` should be like this
 git https://gitee.com/labiao/mfr-pgc-net.git
 cd MFR-PGC-Net
 bash train_multi.sh # For training a classification network
-# For transforming the weights of the Repvgg network to deploy.
+# To transform the weights of the Repvgg backbone into deployment.
 python transform_to_deploy.py --NAME multi633_g3_deploy --config-file configs/grad_cam_repvgg.yml --WEIGHTS multi633_g3.pt 
 bash generation_multi.sh # For generating pseudo labels
 ```
